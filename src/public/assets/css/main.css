@@ -196,8 +196,8 @@ h2 {
 
 .card {
   padding: 20px;
-  height: 345px; 
-  box-shadow: 0 0 4px 0.5px var(--text-secondary);
+  height: 445px; 
+  box-shadow: 0 0 2px 0.4px var(--text-secondary);
   margin: 20px;
   display: inline-block;
   width: calc(100vw / 4);
@@ -253,10 +253,10 @@ h2 {
   display: block;
   margin: 0 auto;
   position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  box-shadow: 0 0 4px 0.5px var(--text-secondary);
+  width: 200px;
+  height: 200px;
+  border-radius: 0%;
+  box-shadow: 0 0 px 0.9px var(--text-secondary);
 }
 
 .card a {
@@ -306,10 +306,10 @@ h2 {
 
 #img-holder {
   float: left;
-  border-radius: 20px;
+  border-radius: 990px;
   width: 250px;
-  margin: 0 50px;
-  background-color: var(--background-2);
+  margin: 0 60px;
+  
 }
 
 .right {
@@ -319,7 +319,7 @@ h2 {
 }
 
 #bot-icon {
-  border-radius: 20px;
+  border-radius: 90px;
 }
 
 #botprefix {

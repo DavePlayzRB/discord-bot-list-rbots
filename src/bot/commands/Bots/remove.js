@@ -72,7 +72,7 @@ module.exports = class extends Command {
         
         owners = await message.guild.members.fetch({user: owners})
         owners.forEach(o => {
-            o.send(`Your bot ${bot.username} has been removed:\n>>> ${r}`)
+            o.send(  `Your bot ${bot.username} has been removed:\n>>> ${r}`)
         })
         if (!message.client.users.cache.find(u => u.id === bot.botid).bot) return;
         try {

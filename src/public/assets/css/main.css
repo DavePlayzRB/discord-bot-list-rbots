@@ -195,8 +195,8 @@ h2 {
 }
 
 .card {
-  padding: 20px;
-  height: 345px; 
+  padding: 10px;
+  height: 433px; 
   box-shadow: 0 0 4px 0.5px var(--text-secondary);
   margin: 20px;
   display: inline-block;

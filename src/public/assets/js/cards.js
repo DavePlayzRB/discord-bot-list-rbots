@@ -41,6 +41,7 @@ function loadMore(res) {
             </h2>
             <p class="desc">${bot.description}</p>
             <a href="/bots/${bot.botid}" class="button small">View</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=${val.botid}&scope=bot&guild_id=${id}&permissions=0" class="button small">Invite</a>
         </div>`
 
         document.getElementById('cards').insertAdjacentHTML("beforeend", html)

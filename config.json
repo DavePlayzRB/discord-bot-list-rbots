@@ -1,0 +1,38 @@
+{
+    "mongo_url": "mongodb+srv://6526931122Xr:Dave6526931122@cluster0.vfw6j.mongodb.net/test",
+    "server": {
+        "id": "803026845825761320",
+        "invite": "https://discord.gg/d3SBQ7eZFh",
+        "mod_log_id": "803026846273765434",
+        "like_log": "795171933037002804",
+        "admin_user_ids": ["656643800235507712", "746939269750456320", "763754858980311081", "755871031851221022", "1", "1"],        
+      "role_ids": {
+            "bot": "795171932084895798", 
+            "unverified": "795171931858796582",
+            "verified": "795171932084895798",
+
+            "bot_developer": "795171932084895803",
+            "bot_verifier": "795171932109799469"
+        }
+    },
+    "bot_options": {
+        "bot_tags": ["Moderation", "Fortnite", "Utility", "Dashboard", "ROBLOX", "Leveling", "Other", "Music"],
+        "max_bot_tags": 20,
+        "max_owners_count": 90
+    },
+    "discord_client": {
+        "id": "795516179296682016",
+        "secret": "AW1IJYj3Dn5hc4p32wXfRNTtvp_5XRsI",
+        "token": "Nzk1NTE2MTc5Mjk2NjgyMDE2.X_KgLQ.w_bU9L9T3z41MfFtoU4QxEJ7pxM",
+        "prefix": "!"
+    },
+    "web": {
+        "domain_with_protocol": "https://rbots.glitch.me",
+        "port": 3000,
+        "ratelimit": 30,
+        "recaptcha_v2": {
+            "site_key": "6LfeejsaAAAAAAgJeJwoGsySamisbZiDqy0X5hI4",
+            "secret_key": "6LfeejsaAAAAAINujsIfJK9p1voewJSjk4CRa9Au"
+        }
+    }
+}

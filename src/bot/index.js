@@ -19,7 +19,7 @@ const client = new Client({
 
 //Bot Status
 client.once('ready', () => {
-    client.user.setActivity('Discord Bots', { type: "STREAMING" });
+    client.user.setActivity('DisCloud', { type: "WATCHING" });
 });
 
 module.exports.init = async (token) => {

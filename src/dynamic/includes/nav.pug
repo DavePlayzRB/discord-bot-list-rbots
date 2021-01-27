@@ -1,8 +1,9 @@
 #navTop
     span.nav.link
+     a(href='/join' 
         img(src='https://media.discordapp.net/attachments/803026846656364615/803430391842471956/unknown.png?width=90&height=90')
     span.navtag.keep
-        a(href="/")
+        a(href="https://status.zerotwobot.io/")
             span.navtext.keep DisCloud
         include arrow.pug
         if (bot && !site_key) 
@@ -40,4 +41,4 @@
                 br
                 a(href='/logout') Logout
         else
-            a#login.navtag.keep(href='/login') Login
+            a#login.navtag.keep(href='/login') Login With Discord

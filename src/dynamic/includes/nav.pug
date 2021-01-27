@@ -1,10 +1,11 @@
 #navTop
     span.nav.link
-     a(href='/join' 
         img(src='https://media.discordapp.net/attachments/803026846656364615/803430391842471956/unknown.png?width=90&height=90')
     span.navtag.keep
-        a(href="https://status.zerotwobot.io/")
+        a(href="/")
             span.navtext.keep DisCloud
+            br
+           a(href='/join' target='_blank') Join Server          
         include arrow.pug
         if (bot && !site_key) 
             a(href=`/bots/${bot.botid}`)
@@ -32,8 +33,6 @@
                 br
                 a(href='/api/theme') Toggle Theme
                 br
-                a(href='/rules') Rules
-                br
                 a(href='/about') About
                 if (req.user.staff)
                     br
@@ -41,4 +40,4 @@
                 br
                 a(href='/logout') Logout
         else
-            a#login.navtag.keep(href='/login') Login With Discord
+            a#login.navtag.keep(href='/login') Login

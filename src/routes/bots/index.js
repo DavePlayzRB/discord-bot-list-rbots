@@ -9,6 +9,8 @@ const Bots = require("@models/bots");
 
 const { server: {id, admin_user_ids, role_ids: {bot_verifier}} } = require("@root/config.json");
 
+const { server: {dd, Server, role_ids: {Bot_Dev}} } = require("@root/config.json");
+
 const route = Router();
 
 route.use("/resubmit", resubmit);

@@ -2,17 +2,17 @@
     "mongo_url": "mongodb+srv://6526931122Xr:Dave6526931122@cluster0.vfw6j.mongodb.net/test",
     "server": {
         "id": "803026845825761320",
-        "invite": "",
-        "mod_log_id": "",
-        "like_log": "",
+        "invite": "https://discord.gg/QPHaKMJrMQ",
+        "mod_log_id": "803026846273765434",
+        "like_log": "803026846273765435",
         "admin_user_ids": ["792919303862747146", "656643800235507712", "", "", "", ""],        
       "role_ids": {
-            "bot": "", 
-            "unverified": "",
-            "verified": "",
+            "bot": "803026845825761327", 
+            "unverified": "803026845825761323",
+            "verified": "803835437595492372",
 
-            "bot_developer": "",
-            "bot_verifier": ""
+            "bot_developer": "803026845837688832",
+            "bot_verifier":  "803026845837688836"
         }
     },
     "bot_options": {

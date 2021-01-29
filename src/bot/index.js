@@ -23,7 +23,7 @@ const client = new Client({
 
 //Bot Status
 client.once('ready', () => {
-    client.user.setActivity('DisCloud', { type: "WATCHING" });
+    client.user.setActivity('DisCloud Bots', { type: "WATCHING" });
 });
 
 module.exports.init = async (token) => {

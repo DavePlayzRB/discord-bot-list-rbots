@@ -9,6 +9,6 @@ module.exports = class extends Command {
     }
 
     async run(message) {
-        await Bots.updateMany({}, { likes: 1 });
+        await Bots.updateMany({}, { likes: 0 });
         message.channel.send('Successfully Reset all Bot Likes to 0')
 };}

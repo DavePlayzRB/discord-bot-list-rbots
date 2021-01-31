@@ -15,10 +15,11 @@
                 pan.navtext #{userProfile.username}
         if (req.baseUrl == "/tag")
             a(href=`/tag/${tag}`)
-                span.navtext.capitalise #{tag}
+                 span.navtext.capitalise #{tag}
     a#searcher.navtag.search(href='/bots/search/')
         #search.navtext
             i.fas.fa-search
+            
             |  Search
     span.dropdown
         if (req.user)
@@ -37,5 +38,6 @@
                 br
                 a(href='/logout') Logout
         else
-              a#login.navtag.keep(href='/login')  Login With Discord 
+              a#login.navtag.keep(href='/login') Login With Discord 
                 i.fas.fa-sign-in-alt
+                

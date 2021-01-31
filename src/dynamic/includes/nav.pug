@@ -19,8 +19,8 @@
     a#searcher.navtag.search(href='/bots/search/')
         #search.navtext
             i.fas.fa-search
-            
-            |  Search
+                      
+                      |  Search
     span.dropdown
         if (req.user)
             a#login.navtag.keep(href='/login') #{req.user.username}##{req.user.discriminator}
@@ -31,13 +31,11 @@
                 br
                 a(href='/about') About
                 if (req.user.staff)
-                    br
-                    a(href='/admin') Dashboard
+                br
+                a(href='/admin') Dashboard
                 br
                 a(href='/logout') Logout
-        else
+        else     
               a#login.navtag.keep(href='/login') Login With Discord 
                 i.fas.fa-sign-in-alt
-        span.navtag.keep
-        a(href="/")
-            span.navtext.keep DisCloud 
+        

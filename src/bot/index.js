@@ -5,13 +5,6 @@ const {server: {role_ids: {bot_verifier}}, discord_client: {prefix}} = require("
 Client.defaultPermissionLevels
     .add(8, ({ guild, member }) => member.roles.cache.has(bot_verifier));
 
-
-
-
-
-
-
-
 const client = new Client({
     commandEditing: true,
     prefix: prefix,
@@ -26,7 +19,7 @@ const client = new Client({
 
 //Bot Status
 client.once('ready', () => {
-    client.user.setActivity('DisCloud Bots Get Verify :)', { type: "WATCHING" });
+    client.user.setActivity('DisCloud Bots', { type: "WATCHING" });
 });
 
 module.exports.init = async (token) => {

@@ -195,16 +195,17 @@ h2 {
 }
 
 .card {
-  padding: 10px;
-  height: 433px; 
-  box-shadow: 0 0 4px 0.5px var(--text-secondary);
+  padding: 20px;
+  height: 345px; 
+  box-shadow: 0 0 4px 0.5px var(--box-shadow);
   margin: 20px;
   display: inline-block;
   width: calc(100vw / 4);
+  border-radius: 10px;
   transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
 }
 .card:hover {
-  box-shadow: 0 0 12px 0.5px var(--text-secondary);
+  box-shadow: 0 0 12px 0.5px var(--box-shadow);
   transform: translateY(-0.30em);
 }
 .large {
@@ -256,7 +257,7 @@ h2 {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  box-shadow: 0 0 4px 0.5px var(--text-secondary);
+  box-shadow: 0 0 4px 0.5px var(--box-shadow);
 }
 
 .card a {
@@ -338,6 +339,8 @@ h2 {
   padding: 1px 15px;
   margin: 80px 50px;
   float: left;
+  border-radius: 10px;
+  border: 1px solid var(--background-border);
 }
 
 .isurl {
@@ -374,8 +377,10 @@ h2 {
 
 code {
   padding: 2px 5px;
-  color: #ff5252;
-  background-color: #f3f3f3;
+  color: var(--secondary);
+  background-color: var(--background-code);
+  border: 1px solid var(--background-border);
+  border-radius: 5px;
 }
 
 #searchMore {
@@ -456,6 +461,8 @@ code {
   right: 0;
   z-index: 0;
   background-color: var(--background-color);
+  border-radius: 10px;
+  border: 1px solid var(--background-2);
 }
 
 .dd-content:hover {
@@ -623,6 +630,7 @@ hr {
   padding: 5px 10px;
   background-color: var(--background-2);
   border-radius: 50px;
+  border: 1px solid var(--background-border);
 }
 
 .smallwidth {
@@ -794,62 +802,11 @@ a {
 }
 
 .bot-tag:hover::after {
-  border-left-color: var(--primary); 
+   border-left-color: var(--primary); 
 }
 
 .capitalise {
   text-transform: capitalize;
-}
-
-.verified {
-  position: relative;
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 0.7em;
-  border-radius: 50%;
-  border: 1px solid var(--primary);
-  padding: 5px;
-}
-
-.verified .verified_tooltip {
-  opacity: 0;
-  width: 120px;
-  background-color: var(--background-2);
-  color: var(--color);
-  text-align: center;
-  border-radius: 6px;
-  font-weight: normal;
-  font-family: "Hind", Arial, sans-serif;
-  padding: 7px 0 5px 0;
-  position: absolute;
-  bottom: calc(100% + 10px);
-  left: -175%;
-  z-index: 1;
-  transition: 400ms ease opacity;
-}
-
-.verified .verified_tooltip::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: var(--background-2) transparent transparent transparent;
-}
-
-.verified:hover .verified_tooltip {
-    opacity: 1;
-}
-
-.verified:hover {
-  cursor: pointer;
-}
-
-.tag {
-  position: relative;
-  top: -10px;
 }
 
 @media (max-width: 1000px) {

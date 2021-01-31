@@ -29,7 +29,7 @@ module.exports = class extends Command {
             if (typeof bot.support === 'undefined' || bot.support === null) {
                 e.addField(`Support Server`, `Not Added`, true)
             } else {
-                e.addField(`Support Server`, `[Here](${bot.support})`, true)
+                e.addField(`Support Server`, `[Click Here](${bot.support})`, true)
             }
             if (typeof bot.website === 'undefined' || bot.website === null) {
                 e.addField(`Website`, `Not Added`, true)
@@ -50,6 +50,4 @@ module.exports = class extends Command {
             e.addField(`State`, bot.state, true)
         message.channel.send(e);
     }
-};
-   }
 };

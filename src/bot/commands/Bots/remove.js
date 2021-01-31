@@ -63,7 +63,7 @@ module.exports = class extends Command {
             .addField("Reason", reason, true)
             .setThumbnail(botUser.displayAvatarURL({format: "png", size: 256}))
             .setTimestamp()
-            .setColor(0x26ff00)
+            .setColor(808080)
         modLog.send(e)
         modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
         message.channel.send(`Removed <@${bot.botid}> Check <#${mod_log_id}>.`)

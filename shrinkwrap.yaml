@@ -17,6 +17,7 @@ dependencies:
   passport: 0.4.1
   passport-discord: 0.1.4
   pug: 3.0.0
+  recaptcha: 1.2.1
   recaptcha2: 1.3.3
   sanitize-html: 2.3.2
   showdown: 1.9.1
@@ -2205,6 +2206,12 @@ packages:
       node: '>=8.10.0'
     resolution:
       integrity: sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==
+  /recaptcha/1.2.1:
+    dev: false
+    engines:
+      node: '>= 0.6.0'
+    resolution:
+      integrity: sha1-PXpXalJaoZJw2LCskIIO58qeuK4=
   /recaptcha2/1.3.3:
     dependencies:
       request: 2.88.2
@@ -2896,6 +2903,7 @@ specifiers:
   passport: ^0.4.1
   passport-discord: ^0.1.4
   pug: ^3.0.0
+  recaptcha: ^1.2.1
   recaptcha2: ^1.3.3
   sanitize-html: ^2.3.0
   showdown: ^1.9.1

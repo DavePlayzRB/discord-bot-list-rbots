@@ -16,7 +16,7 @@ body
             h2(style='display: inline;')
                 | #{bot.username}
                 if (discord_verified)
-                    i.fas.fa-medal.verified
+                   fas fa-badge-check
                         span.verified_tooltip Verified Bot Discord Bot
                 a.likes(href=`/bots/like/${bot.botid}`)
                     i.far.fa-heart

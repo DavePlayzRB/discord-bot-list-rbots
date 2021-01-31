@@ -5,9 +5,9 @@ const Bots = require("@models/bots");
 const { server: {mod_log_id, role_ids} } = require("@root/config.json");
 
 const reasons = {
-    "1": `Your bot was offline when we tried to review it. For that reason, we are unable to test it. Please get your bot online and re-apply.`,
-    "2": `Your bot is a clone of another bot`,
-    "3": `Your bot responds to other bots`,
+    "1": `Your bot was offline when we tried to review it.`,
+    "2": `Your bot is private. Please make the bot public so we can test it.`,
+    "3": `The long description on your bot's page is filled out with spam`,
     "4": `Your bot doesn't have any enough working commands. (Minimum: 7)`,
     "5": `Your bot has NSFW commands that work in non-NSFW marked channels`,
     "6": `Your bot doesn't have a working help command or commands list`
@@ -22,7 +22,7 @@ module.exports = class extends Command {
             aliases: ["delete"],
             permissionLevel: 8,
             botPerms: ["SEND_MESSAGES"],
-            description: "Remove a bot from the botlist",
+            description: "Remove a bot from the DisCloud",
             usage: '[Member:user]'
         });
     }

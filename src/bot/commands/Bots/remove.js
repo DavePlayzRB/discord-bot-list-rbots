@@ -5,7 +5,7 @@ const Bots = require("@models/bots");
 const { server: {mod_log_id, role_ids} } = require("@root/config.json");
 
 const reasons = {
-    "1": `Your bot was offline when we tried to verify it.`,
+    "1": `Your bot was offline when we tried to review it. For that reason, we are unable to test it. Please get your bot online and re-apply.`,
     "2": `Your bot is a clone of another bot`,
     "3": `Your bot responds to other bots`,
     "4": `Your bot doesn't have any enough working commands. (Minimum: 7)`,

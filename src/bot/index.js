@@ -26,7 +26,7 @@ const client = new Client({
 
 //Bot Status
 client.once('ready', () => {
-    client.user.setActivity('DisCloud Bots', { type: "WATCHING" });
+    client.user.setActivity('DisCloud Bots', { type: "DND" });
 });
 
 module.exports.init = async (token) => {

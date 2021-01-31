@@ -41,7 +41,6 @@ function loadMore(res) {
             </h2>
             <p class="desc">${bot.description}</p>
             <a href="/bots/${bot.botid}" class="button small">View</a>
-            <a href="" class="button small">Add</a>
         </div>`
 
         document.getElementById('cards').insertAdjacentHTML("beforeend", html)

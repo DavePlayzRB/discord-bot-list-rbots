@@ -20,7 +20,7 @@ body
                         span.verified_tooltip Verified Bot Discord Bot
                 a.likes(href=`/bots/like/${bot.botid}`)
                     i.far.fa-heart
-                    | #{bot.likes || 0}
+                    | Bot Likes #{bot.likes || 0}
             if (servers)
                 .servers #{`${servers} servers`}
             .sts(class=botUser.presence.status)

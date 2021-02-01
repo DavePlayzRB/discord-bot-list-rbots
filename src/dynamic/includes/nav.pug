@@ -23,19 +23,24 @@
             |  Search
     span.dropdown
         if (req.user)
-            a#login.navtag.keep(href='/login') #{req.user.username}##{req.user.discriminator}
+            a#login.navtag.keep(href='/login') #{req.user.username}##{req.user.discriminator} 
+            i.fas.fa-id-badge
             span.dd-content
-                a(href='/join' target='_blank') Join Server
+                a(href='/join' target='_blank') Join Server 
                  i.fab.fa-discord
                 br
                 a(href='/add') Add bot 
                 i.fas.fa-plus
                 br
-                a(href='/about') About
+                a(href='/about') About 
+                i.fas.fa-address-book
                 if (req.user.staff)
                     br
-                    a(href='/admin') Dashboard
+                    a(href='/admin') Dashboard 
+                    i.fas.fa-tools
                 br
-                a(href='/logout') Logout
+                a(href='/logout') Logout 
+                  i.fas.fa-sign-out-alt
         else
             a#login.navtag.keep(href='/login') Login
+              fas fa-sign-in-alt

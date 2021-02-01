@@ -39,7 +39,7 @@ module.exports = class extends Command {
         owners = await message.guild.members.fetch({user:owners})
         owners.forEach(o => {
             o.roles.add(message.guild.roles.cache.get(role_ids.bot_developer));
-            o.send(`🟢 Your bot \`${bot.username}\`  was approved by `)
+            o.send(`<:check_mark:805431321630605352>  Your bot \`${bot.username}\`  was approved`)
         })
         message.guild.members.fetch(message.client.users.cache.find(u => u.id === bot.botid)).then(bot => {
             bot.roles.set([role_ids.bot, role_ids.verified]);

@@ -36,7 +36,7 @@ route.post("/:id", auth, async function (req, res) {
     owners = await req.app.get('client').guilds.cache.get(id).members.fetch({user:owners})
     owners.forEach(o => {
         o.roles.add(req.app.get('client').guilds.cache.get(id).roles.cache.get(role_ids.bot_developer));
-        o.send(`Your bot \`${bot.username}\` has been verified.`)
+        o.send(`<:check_mark:805431321630605352> Your bot \`${bot.username}\` has been verified.`)
     })
 
     // Update bot roles

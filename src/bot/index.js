@@ -19,7 +19,7 @@ const client = new Client({
 
 //Bot Status
 client.once('ready', () => {
-    client.user.setActivity('DisCloud Bots', { type: "WATCHING" });
+    client.user.setActivity('Toyota Bot List Website', { type: "WATCHING" });
 });
 
 module.exports.init = async (token) => {

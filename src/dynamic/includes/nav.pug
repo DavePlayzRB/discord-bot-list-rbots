@@ -7,10 +7,8 @@
         include arrow.pug
         if (bot && !site_key) 
             a(href=`/bots/${bot.botid}`)
-                span.navtext #{bot.username}
             include arrow.pug
             a(href=`/api/embed/${bot.botid}` target="_blank")
-                span.navtext Embed
         if ((req.baseUrl == "/user" || req.baseUrl == "/me") && userProfile)
             a(href=`/user/${userProfile.id}`)
                 span.navtext #{userProfile.username}

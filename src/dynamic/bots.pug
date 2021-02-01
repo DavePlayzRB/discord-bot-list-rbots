@@ -17,7 +17,7 @@ body
                 | #{bot.username}
                 if (discord_verified)
                    fas fa-badge-check
-                        span.verified_tooltip Verified Bot Discord Bot
+                        span.verified_tooltip Verified Discord Bot
                 a.likes(href=`/bots/like/${bot.botid}`)
                     i.far.fa-heart
                     | Bot Likes #{bot.likes || 0}

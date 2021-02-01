@@ -18,7 +18,7 @@ body {
   color: var(--color);
 }
 
-#navTop {
+##navTop {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,6 +28,7 @@ body {
   text-decoration: none;
   margin: 30px 50px;
   background-color: var(--background-color);
+  border-radius: 50px;
   transition: 0.5s box-shadow, 0.5s margin, 0.5s width;
   z-index: 100;
 }

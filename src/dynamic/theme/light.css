@@ -1,8 +1,11 @@
 :root {
-    --background-color: #272a34;
+    --background-color: #272a34;;
     --background-2: #4F6272;
+    --background-border: #191919;
+    --background-code: #19191a;
     --color: #eee;
     --primary: #9de0f6;
-    --secondary: #9de0f6;
+    --secondary: #fafafa;
+    --text-secondary: #ffffff;
     --box-shadow: #060607;
 }

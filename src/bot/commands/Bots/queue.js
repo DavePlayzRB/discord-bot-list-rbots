@@ -21,7 +21,7 @@ module.exports = class extends Command {
 
         let embed = new MessageEmbed()
             .setTitle('<:DisCloud_online:803579685166120991> Queue')
-            .setColor(0x6b83aa)
+            .setColor(0xff8c00)
             .setDescription(cont)
         message.channel.send(embed)
     }

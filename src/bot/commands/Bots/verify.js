@@ -32,7 +32,7 @@ module.exports = class extends Command {
             .addField("Mod", message.author, true)
             .setThumbnail(botUser.displayAvatarURL({format: "png", size: 256}))
             .setTimestamp()
-            .setColor(0x26ff00)
+            .setColor(0xff8c00)
         modLog.send(e);
         modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
 

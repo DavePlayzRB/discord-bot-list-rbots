@@ -10,8 +10,8 @@ body
         .badge-holder
             if (admin)
                 span.badge
-                    img(src='https://top.gg/images/mod.svg' title='Site Moderators')
-                    |  Site Moderators
+                    img(src='https://discordbotdirectory.net/assets/img/admin.png' title='Verified Site Admin')
+                    |Verified Site Admin
     br
     a.button(href='/add') Add a bot
     #cards
@@ -32,9 +32,9 @@ body
                     a.small.half.half-right.button.button-red.delete(href="#confirm" data-id=val.botid data-name=val.username)
                         |  Delete
                 else
-                    a.small.half.half-left.button(href=`/bots/edit/${val.botid}/`) Edit Bot 
+                    a.small.half.half-left.button(href=`/bots/edit/${val.botid}/`) Edit Bot
                     a.small.half.half-right.button.button-red.delete(href="#confirm" data-id=val.botid data-name=val.username)
-                        |  Delete 
+                        |  Delete
     br
     span.center
         a(href='/join') Join Server

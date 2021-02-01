@@ -16,7 +16,7 @@
         }
     },
     "bot_options": {
-        "bot_tags": ["Music", "Moderation", "Fun", "Economy", "Anime", "Game", "Meme", "Music", "Social", "Leveling", "Roleplay", "Role Management", "Logging", "Web Dashboard", "Stream", "Crypto", "Media", "Turkish", "Soundboard", "Utility", "Customizable Behavior", "PUBG", "Rocket League", "Fortnite", "Overwatch", "CSGO", "OSU!", "Minecraft", "League of Legends", "Warframe", "Diablo III", "Rust", "DOTA 2", "Starcraft 2", "Factorio", "Runescape", "Apex Legends", "Looking For Game", "Sneaker", "Pokemon", "Reddit", "Twitch", "Animal Crossing", "Valorant", "", "", ""],
+        "bot_tags": ["Music", "Moderation", "Fun", "Economy", "Anime", "Game", "Meme", "Music", "Social", "Leveling", "Roleplay", "Role Management", "Logging", "Web Dashboard", "Stream", "Crypto", "Media", "Turkish", "Soundboard", "Utility", "Customizable Behavior", "PUBG", "Rocket League", "Fortnite", "Overwatch", "CSGO", "OSU!", "Minecraft", "League of Legends", "Warframe", "Diablo III", "Rust", "DOTA 2", "Starcraft 2", "Factorio", "Runescape", "Apex Legends", "Looking For Game", "Sneaker", "Pokemon", "Reddit", "Twitch", "Animal Crossing", "Valorant", "Modlxv1", "MEE6", "Dyno"],
         "max_bot_tags": 20,
         "max_owners_count": 90
     },

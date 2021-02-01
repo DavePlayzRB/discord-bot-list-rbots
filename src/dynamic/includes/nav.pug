@@ -1,46 +1,41 @@
 #navTop
     span.nav.link
-        img(src='https://media.discordapp.net/attachments/803026846454513754/804926847300927489/icons8-discord-100.png?width=90&height=90')
+        img(src='/assets/img/logo.png')
     span.navtag.keep
         a(href="/")
-            span.navtext.keep DisCloud        
+            span.navtext.keep Discord Bot List
         include arrow.pug
         if (bot && !site_key) 
-           
+            a(href=`/bots/${bot.botid}`)
+                span.navtext #{bot.username}
             include arrow.pug
             a(href=`/api/embed/${bot.botid}` target="_blank")
-              
+                span.navtext Embed
         if ((req.baseUrl == "/user" || req.baseUrl == "/me") && userProfile)
             a(href=`/user/${userProfile.id}`)
-                pan.navtext #{userProfile.username}
+                span.navtext #{userProfile.username}
         if (req.baseUrl == "/tag")
             a(href=`/tag/${tag}`)
-                 span.navtext.capitalise #{tag}
+                span.navtext.capitalise #{tag}
     a#searcher.navtag.search(href='/bots/search/')
         #search.navtext
             i.fas.fa-search
-                      
-                      |  Search
+            |  Search
     span.dropdown
         if (req.user)
             a#login.navtag.keep(href='/login') #{req.user.username}##{req.user.discriminator}
             span.dd-content
-                a(href='/join' target='_blank') Join Server 
-                i.fab.fa-discord
+                a(href='/join' target='_blank') Join Server
                 br
-                a(href='/add') Add bot 
-                i.fas.fa-plus
+                a(href='/add') Add bot
+                br
+                a(href='/api/theme') Toggle Theme
                 br
                 a(href='/about') About
                 if (req.user.staff)
+                    br
+                    a(href='/admin') Dashboard
                 br
-                a(href='/admin') Dashboard 
-                i.fas.fa-tools
-                br
-                a(href='/logout') Logout  
-                i.fas.fa-sign-out-alt
-        else     
-              a#login.navtag.keep(href='/login') Login With Discord 
-                i.fas.fa-sign-in-alt
-                br
-           
+                a(href='/logout') Logout
+        else
+            a#login.navtag.keep(href='/login') Login

@@ -16,7 +16,7 @@
         }
     },
     "bot_options": {
-        "bot_tags": ["Music", "Moderation", "Fun", "Economy", "Anime", "Game", "Meme", "Music", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",],
+        "bot_tags": ["Music", "Moderation", "Fun", "Economy", "Anime", "Game", "Meme", "Music", "Social", "Leveling", "Roleplay", "Role Management", "Logging", "Web Dashboard", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "","","", "", ""],
         "max_bot_tags": 20,
         "max_owners_count": 90
     },

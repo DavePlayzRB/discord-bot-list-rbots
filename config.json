@@ -16,7 +16,7 @@
         }
     },
     "bot_options": {
-        "bot_tags": ["Moderation", "Roblox", "Utility", "Dashboard", "Fortnite", "Leveling", "Other", "Music"],
+        "bot_tags": ["Music", "Moderation", "Fun", "Economy", "Anime", "Game", "Meme", "Music", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",],
         "max_bot_tags": 20,
         "max_owners_count": 90
     },

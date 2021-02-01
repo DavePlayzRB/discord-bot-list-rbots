@@ -1,9 +1,9 @@
 #navTop
     span.nav.link
-        img(src='/assets/img/logo.png')
+        img(src='https://media.discordapp.net/attachments/804066817567883294/805732470691594250/PngItem_2986122.png?width=457&height=457')
     span.navtag.keep
         a(href="/")
-            span.navtext.keep Discord Bot List
+            span.navtext.keep Toyota
         include arrow.pug
         if (bot && !site_key) 
             a(href=`/bots/${bot.botid}`)
@@ -24,7 +24,6 @@
     span.dropdown
         if (req.user)
             a#login.navtag.keep(href='/login') #{req.user.username}##{req.user.discriminator} 
-            i.fas.fa-id-badge
             span.dd-content
                 a(href='/join' target='_blank') Join Server 
                  i.fab.fa-discord
@@ -43,4 +42,4 @@
                   i.fas.fa-sign-out-alt
         else
             a#login.navtag.keep(href='/login') Login
-              fas fa-sign-in-alt
+              fas.fa-sign-in-alt

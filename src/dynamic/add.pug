@@ -1,14 +1,14 @@
 doctype html
 include includes/head.pug
 script(src='/assets/js/form.js')
-script(src="htt ps://www.google.com/recaptcha/api.js" async defer)
+script(src="https://www.google.com/recaptcha/api.js" async defer)
 
 body
     include includes/nav.pug
     #content
         span.header
             h1 Adding New Bot
-            h3 Enter the information about your bot in the below Form
+            p Enter the information about your bot in the below Form
         br
         form.center
             .input-holder
@@ -39,7 +39,3 @@ body
             a.button(onclick='submit()') Submit
             br
         br
-        
-        h2 News
-        h2 The bot library Has Been Remove! 
-        

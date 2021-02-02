@@ -14,13 +14,13 @@ body
                     code.prefix #{bot.prefix}
         .right
             h2(style='display: inline;')
-                | #{bot.username}
+                | #{bot.username} 
                 if (discord_verified)
-                   fas fa-badge-check
-                        span.verified_tooltip Verified Discord Bot
+                    i.fas.fa-medal.verified
+                        span.verified_tooltip 
                 a.likes(href=`/bots/like/${bot.botid}`)
                     i.far.fa-heart
-                    | Bot Likes #{bot.likes || 0}
+                    | #{bot.likes || 0}
             if (servers)
                 .servers #{`${servers} servers`}
             .sts(class=botUser.presence.status)
@@ -33,11 +33,11 @@ body
                 a.bot-btns.button(target='_blank' href=`/api/embed/${bot.botid}`) Embed
             .bot-buttons
                 if (bot.support)
-                    a.small-link(target='_blank' href=`${bot.support}`) Support Server
+                    a.bot-btns.button(target='_blank' href=`${bot.support}`) Support
                 if (bot.website)
-                    a.small-link(target='_blank' href=`${bot.website}`) Website
+                   a.bot-btns.button(target='_blank' href=`${bot.website}`) Website
                 if (bot.github)
-                    a.small-link(target='_blank' href=`${bot.github}`) Github
+                   a.bot-btns.button(target='_blank' href=`${bot.github}`) Github
             if (bot.tags)
                 ul.tags
                     each tag in bot.tags

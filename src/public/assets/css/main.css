@@ -257,7 +257,7 @@ h2 {
   width: 100px;
   height: 100px;
   border-radius: 10%;
-  box-shadow: 0 0 4px 0.5px var(--box-shadow);
+  box-shadow: 0 0 px 0.5px var(--box-shadow);
 }
 
 .card a {

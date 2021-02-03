@@ -45,12 +45,10 @@
         else
             a#login.navtag.keep(href='/login') Login 
              i.fas.fa-sign-in-alt
-                 span.navtext #{userProfile.username}
-        if (req.baseUrl == "/tag")
-            a(href=`/tag/${tag}`)
+              
                 span.navtext.capitalise #{tag}
     a#searcher.navtag.search(href='/bots/search/')
         #search.navtext
-            i.fas.fa-search
-            |  Search
+           i.fab.fa-discord  
+            | Discord  
     

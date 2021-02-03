@@ -24,9 +24,8 @@ route.post("/:id", auth, async function (req, res) {
     let modLog = await req.app.get('client').channels.cache.get(mod_log_id);
     modLog.send(
         new MessageEmbed()
-            .setTitle('Bot declined')
+            .setTitle(':checkmark:806251154400346172> Bot declined')
             .addField(`Bot`, `<@${bot.botid}>`, true)
-            .addField("Mod", req.user.username, true)
             .addField("Reason", reason, true)
             .setThumbnail(botUser.displayAvatarURL({format: "png", size: 256}))
             .setTimestamp()
@@ -37,7 +36,7 @@ route.post("/:id", auth, async function (req, res) {
     // Update developer roles and send DM
     owners = await req.app.get('client').guilds.cache.get(id).members.fetch({user:owners})
     owners.forEach(o => {
-        o.send(`Your bot \`${bot.username}\` has been removed:\n>>> ${reason}`)
+        o.send(`:checkmark:806251154400346172> Your bot named \`${bot.username}\` has been removed:\n>>> ${reason}`)
     })
     
     // Kick bot

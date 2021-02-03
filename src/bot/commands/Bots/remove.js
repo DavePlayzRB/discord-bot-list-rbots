@@ -5,10 +5,10 @@ const Bots = require("@models/bots");
 const { server: {mod_log_id, role_ids} } = require("@root/config.json");
 
 const reasons = {
-    "1": `Your bot was offline when we tried to review it.`,
-    "2": `Your bot is private. Please make the bot public so we can test it.`,
+    "1": `Your Bot Spam The Server`,
+    "2": `Your Bot Spam My Fans Dms.`,
     "3": `The long description on your bot's page is filled out with spam`,
-    "4": `Your bot doesn't have any enough working commands. (Minimum: 7)`,
+    "4": `Your bot was offline for 14 days`,
     "5": `Your bot has NSFW commands that work in non-NSFW marked channels`,
     "6": `Your bot doesn't have a working help command or commands list`
 }
@@ -58,7 +58,7 @@ module.exports = class extends Command {
         if (!bot) return message.channel.send(`Unknown Error. Bot not found.`)
         let owners = [bot.owners.primary].concat(bot.owners.additional)
         e = new MessageEmbed()
-            .setTitle(' <:crossmark:806251297971634206>  Bot declined')
+            .setTitle(' <:crossmark:806251297971634206> Bot Remove')
             .addField(`Bot`, `<@${bot.botid}>`, true)
             .addField("Reason", reason, true)
             .setThumbnail(botUser.displayAvatarURL({format: "png", size: 256}))
@@ -70,7 +70,7 @@ module.exports = class extends Command {
         
         owners = await message.guild.members.fetch({user: owners})
         owners.forEach(o => {
-            o.send(  ` <:crossmark:806251297971634206> Your bot ${bot.username} has been removed:\n>>> ${r}`)
+            o.send(  ` <:crossmark:806251297971634206> Your bot named ${bot.username} has been removed:\n>>> ${r}`)
         })
         if (!message.client.users.cache.find(u => u.id === bot.botid).bot) return;
         try {

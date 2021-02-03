@@ -29,3 +29,4 @@ module.exports = class extends Command {
 	}
 
 };
+/// [+A-=8] LOL

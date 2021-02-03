@@ -58,7 +58,7 @@ module.exports = class extends Command {
         if (!bot) return message.channel.send(`Unknown Error. Bot not found.`)
         let owners = [bot.owners.primary].concat(bot.owners.additional)
         e = new MessageEmbed()
-            .setTitle('Bot declined')
+            .setTitle(' <:crossmark:806251297971634206>  Bot declined')
             .addField(`Bot`, `<@${bot.botid}>`, true)
             .addField("Reason", reason, true)
             .setThumbnail(botUser.displayAvatarURL({format: "png", size: 256}))
@@ -70,7 +70,7 @@ module.exports = class extends Command {
         
         owners = await message.guild.members.fetch({user: owners})
         owners.forEach(o => {
-            o.send(  ` ❌ Your bot ${bot.username} has been removed:\n>>> ${r}`)
+            o.send(  ` <:crossmark:806251297971634206> Your bot ${bot.username} has been removed:\n>>> ${r}`)
         })
         if (!message.client.users.cache.find(u => u.id === bot.botid).bot) return;
         try {

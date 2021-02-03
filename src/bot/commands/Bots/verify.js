@@ -26,7 +26,7 @@ module.exports = class extends Command {
         
         let owners = [bot.owners.primary].concat(bot.owners.additional)
         let e = new MessageEmbed()
-            .setTitle('Bot Verified')
+            .setTitle(' <:checkmark:806251154400346172> Bot Verified')
             .addField(`Bot`, `<@${bot.botid}>`, true)
             .addField(`Owner(s)`, owners.map(x => x ? `<@${x}>` : ""), true)
             .addField("Mod", message.author, true)
@@ -39,12 +39,12 @@ module.exports = class extends Command {
         owners = await message.guild.members.fetch({user:owners})
         owners.forEach(o => {
             o.roles.add(message.guild.roles.cache.get(role_ids.bot_developer));
-            o.send(`<:checkmark:806251154400346172> Your bot \`${bot.username}\`  was approved`)
+            o.send(`<:checkmark:806251154400346172>  Your bot \**${bot.username}\**  was approved`)
         })
         message.guild.members.fetch(message.client.users.cache.find(u => u.id === bot.botid)).then(bot => {
             bot.roles.set([role_ids.bot, role_ids.verified]);
         })
-        message.channel.send(`Verified \`${bot.username}\``);
+        message.channel.send(`<:checkmark:806251154400346172> Verified \`${bot.username}\``);
     }
 
     async init() {

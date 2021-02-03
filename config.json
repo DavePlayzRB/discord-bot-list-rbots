@@ -5,7 +5,7 @@
         "invite": "https://discord.gg/QPHaKMJrMQ",
         "mod_log_id": "803026846273765434",
         "like_log": "803026846273765435",
-        "admin_user_ids": ["792919303862747146", "656643800235507712", "804933432517197864", "", "", ""],        
+        "admin_user_ids": ["792919303862747146", "656643800235507712", "804933432517197864", "788863905689763841", "", ""],        
       "role_ids": {
             "bot": "803026845825761327", 
             "unverified": "803026845825761323",
@@ -23,7 +23,7 @@
     "discord_client": {
         "id": "795516179296682016",
         "secret": "AW1IJYj3Dn5hc4p32wXfRNTtvp_5XRsI",
-        "token": "Nzk1NTE2MTc5Mjk2NjgyMDE2.X_KgLQ.w_bU9L9T3z41MfFtoU4QxEJ7pxM",
+        "token": "Nzk1NTE2MTc5Mjk2NjgyMDE2.X_KgLQ._p0yyE8XgcxyVsRngElzuez2QVA",
         "prefix": "!"
     },
     "web": {

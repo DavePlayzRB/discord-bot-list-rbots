@@ -37,7 +37,7 @@ module.exports = async (req, b = null) => {
 
     // Check that all the fields are filled in
     if (!data.long.length || !data.description.length || !data.prefix.length)
-        return { success: false, message: "Invalid submission. Check you filled all the fields." }
+        return { success: false, message: "Invalid submission. Check you filled all the fields before applying!" }
     
     // Max length for summary and note
     if (data.description.length > max_summary_length) return { success: false, message: "Your summary is too long." };

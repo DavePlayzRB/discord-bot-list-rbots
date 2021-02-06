@@ -12,7 +12,7 @@ module.exports = async(req, res, next) => {
     if (!bot.auth) return res.json({ success: "false", error: "Create a bot authorization token." });
     if (bot.auth !== auth) return res.json({ success: "false", error: "Incorrect authorization token." });
 
-    if (bot.ratelimit && Date.now() - bot.ratelimit < (ratelimit * 1000)) return res.json({ success: "false", error: "You are being ratelimited." });
+    if (bot.ratelimit && Date.now() - bot.ratelimit < (ratelimit * 1000)) return res.json({ success: "false", error: "Oh Shit You are being ratelimited wtf" });
 
     Bots.updateOne({ botid: req.params.id }, { ratelimit: Date.now() })
     return next();

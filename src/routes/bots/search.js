@@ -16,7 +16,7 @@ route.get("/", async (req, res) => {
     });
     if (!found) return res.send({ error: "No bots found for this search" });
 
-    res.render("index", {
+    res.render("search", {
         cards: found,
         search,
         user: req.user, req

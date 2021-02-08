@@ -39,7 +39,9 @@ $(window).scroll(function () {
     var header = document.getElementById("navTop");
     var elemRect = header.getBoundingClientRect();
     if (elemRect.top <= 0) stickify(header);
-    if ($(window).scrollTop() === 0) unstickify(header);
+    if ($(window).scrollTop() === 0) {
+        unstickify(header)
+    }
 });
 
 function stickify(something) {
@@ -75,7 +77,11 @@ window.onresize = function () {
 };
 
 $(document).ready(function () {
-    responsive();    
+    if (!document.body.style.backgroundColor == '') {
+        document.getElementById("navTop").style.backgroundColor = document.body.style.backgroundColor;
+        document.getElementsByClassName('dd-content')[0].style.backgroundColor = document.body.style.backgroundColor;
+    }
+    responsive();
     let login = document.getElementById("login");
     if (login.innerText == "Login") return;
     login.href = `/me`;
@@ -88,8 +94,8 @@ $(document).ready(function () {
         document.getElementById("searchimg").style.right = `${w - 50}px`;
     if (document.getElementsByClassName("dropdown")[0]) {
         document.getElementsByClassName("dropdown")[0].onmouseover = () =>
-            (document.getElementsByClassName("dd-content")[0].style.display =
-                "block");
+        (document.getElementsByClassName("dd-content")[0].style.display =
+            "block");
         document.getElementsByClassName("dropdown")[0].onmouseout = () =>
             (document.getElementsByClassName("dd-content")[0].style.display = "none");
     }
@@ -102,8 +108,8 @@ $('a[href^="#"]').on("click", function (event) {
         $("html, body")
             .stop()
             .animate({
-                    scrollTop: target.offset().top
-                },
+                scrollTop: target.offset().top
+            },
                 1500
             );
     }

@@ -32,6 +32,7 @@ module.exports = class extends Command {
             e.addField(`Support Server`, !bot.support ? "Not Added" : `[Click Here](${bot.support})`, true)
             e.addField(`Website`, !bot.website ? "Not Added" : `[Click Here](${bot.website})`, true)
             e.addField(`Github`, !bot.github ? "Not Added" : `[Click Here](${bot.github})`, true)
+            e.addField(`twitter`, !bot.twitter ? "Not Added" : `[Click Here](${bot.twitter})`, true)
             e.addField(`Likes`, `${bot.likes || 0} Likes`, true)
             e.addField(`Server Count`, `${servers || 0} Servers`, true)
             e.addField(`Owner`, `<@${bot.owners.primary}>`, true)

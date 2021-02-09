@@ -19,7 +19,7 @@
         #search.navtext
             i.fas.fa-search
             |  Search
- span.dropdown
+  span.dropdown
         if (req.user)
             a#login.navtag.keep(href='/login') #{req.user.username}##{req.user.discriminator} 
             span.dd-content
@@ -45,8 +45,7 @@
             a#login.navtag.keep(href='/login') Login 
                 i.fas.fa-sign-in-alt
          
-        span
-           a#a.nav-link(href='/about')
+       
                 
                 <script async src="https://arc.io/widget.min.js#MZPfymdn"></script>
            

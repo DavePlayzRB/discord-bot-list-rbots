@@ -19,7 +19,7 @@
         #search.navtext
             i.fas.fa-search
             |  Search
-  span.dropdown
+    span.dropdown
         if (req.user)
             a#login.navtag.keep(href='/login') #{req.user.username}##{req.user.discriminator} 
             span.dd-content
@@ -42,11 +42,9 @@
                 a(href='/logout') Logout 
                 i.fas.fa-sign-out-alt
         else
-            a#login.navtag.keep(href='/login') Login 
+             a.nav-link(href='/about')
                 i.fas.fa-sign-in-alt
-         
-       
                 
                 <script async src="https://arc.io/widget.min.js#MZPfymdn"></script>
-           
+                   
         

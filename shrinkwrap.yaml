@@ -12,11 +12,13 @@ dependencies:
   klasa: 0.5.0
   module-alias: 2.2.2
   mongoose: 5.11.15
+  monitor: 0.6.10
   node-fetch: 2.6.1
   node-pre-gyp: 0.14.0
   passport: 0.4.1
   passport-discord: 0.1.4
   pug: 3.0.0
+  reasonable-website: 0.0.2
   recaptcha2: 1.3.3
   sanitize-html: 1.27.5
   showdown: 1.9.1
@@ -115,6 +117,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
+  /active-x-obfuscator/0.0.1:
+    dependencies:
+      zeparser: 0.0.5
+    dev: false
+    resolution:
+      integrity: sha1-CJuJs3FF/x2ex0r2UwvlUmyuHxo=
   /ajv/6.12.6:
     dependencies:
       fast-deep-equal: 3.1.3
@@ -237,9 +245,36 @@ packages:
       node: '>= 10.0.0'
     resolution:
       integrity: sha512-GAwkz0AihzY5bkwIY5QDR+LvsRQgB/B+1foMPvi0FZPMl5fjD7ICiznUiBdLYMH1QYe6vqu4gWYytZOccLouFw==
+  /backbone-callbacks/0.1.7:
+    dependencies:
+      backbone: 0.9.10
+      underscore: 1.4.4
+    dev: false
+    engines:
+      node: '>0.4.x'
+    resolution:
+      integrity: sha1-bYt1DUjwszKtTyoeMpIQh5mdmXM=
+  /backbone/0.9.10:
+    dependencies:
+      underscore: 1.12.0
+    dev: false
+    resolution:
+      integrity: sha1-ErhBwpwSpV7zfVgoA6D3+zUJT4o=
+  /backbone/0.9.9:
+    dependencies:
+      underscore: 1.12.0
+    dev: false
+    resolution:
+      integrity: sha1-CGpo3Q69J6jlQS+RX7Wg3ABinrc=
   /balanced-match/1.0.0:
     resolution:
       integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+  /base64id/0.1.0:
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-As4P3u4M709ACA4ec+g08LG/zj8=
   /base64url/3.0.1:
     dev: false
     engines:
@@ -482,9 +517,21 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
+  /commander/2.1.0:
+    dev: false
+    engines:
+      node: '>= 0.6.x'
+    resolution:
+      integrity: sha1-0SG7roYNmZKj1Re6lvVliOR8Z4E=
   /concat-map/0.0.1:
     resolution:
       integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
+  /config/0.4.37:
+    dev: false
+    engines:
+      node: '>0.4.x'
+    resolution:
+      integrity: sha1-mKcLmYEbHihPbTBT2fHpcDmOTfk=
   /configstore/5.0.1:
     dependencies:
       dot-prop: 5.3.0
@@ -546,6 +593,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+  /cron/0.1.3:
+    dependencies:
+      nodeunit: 0.5.2
+    dev: false
+    resolution:
+      integrity: sha1-MmPwDwwgGtqdt1RCwBoXRdwd6m8=
   /crypto-random-string/2.0.0:
     dev: true
     engines:
@@ -1612,6 +1665,20 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-8T4bT6eCGB7MqCm40oVhnhT/1AyAdwe+y1rYUhdl3ljsks3BpYz8whZgcMkIoh6VoCCjipOXRqZqdk1UByvlYA==
+  /monitor/0.6.10:
+    dependencies:
+      backbone: 0.9.9
+      backbone-callbacks: 0.1.7
+      config: 0.4.37
+      cron: 0.1.3
+      socket.io: 0.9.19
+      socket.io-client: 0.9.17
+      underscore: 1.4.4
+    dev: false
+    engines:
+      node: '>= 0.6.0'
+    resolution:
+      integrity: sha1-xBcQC/ndqHbcQUahLF6FK9juCNw=
   /mpath/0.8.3:
     dev: false
     engines:
@@ -1644,6 +1711,10 @@ packages:
   /ms/2.1.3:
     resolution:
       integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
+  /nan/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-riT4hQgY1mL8q1rPfzuVv6oszzg=
   /nan/2.14.2:
     dev: false
     resolution:
@@ -1722,6 +1793,12 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-Ltced+hIfTmaS28Zjv1BM552oQ3dbwPqI4+zI0SLgq+wpJhSyqgYude/aZa/3i31VCQWMfXJVxvu86abcam3uQ==
+  /nodeunit/0.5.2:
+    deprecated: you are strongly encouraged to use other testing options
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha1-Pma3PF4oSb+vuCG/hdGJ7Cq2wFk=
   /nopt/1.0.10:
     dependencies:
       abbrev: 1.1.1
@@ -1815,6 +1892,12 @@ packages:
       wrappy: 1.0.2
     resolution:
       integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
+  /options/0.0.6:
+    dev: false
+    engines:
+      node: '>=0.4.0'
+    resolution:
+      integrity: sha1-7CLTEoBrtT5zF3Pnza788cZDEo8=
   /os-homedir/1.0.2:
     dev: false
     engines:
@@ -1950,6 +2033,10 @@ packages:
       node: '>=8.6'
     resolution:
       integrity: sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==
+  /policyfile/0.0.4:
+    dev: false
+    resolution:
+      integrity: sha1-1rgurZiueeviKOLa9ZAzEeyYLk0=
   /postcss/7.0.35:
     dependencies:
       chalk: 2.4.2
@@ -2178,12 +2265,21 @@ packages:
       node: '>=8.10.0'
     resolution:
       integrity: sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==
+  /reasonable-website/0.0.2:
+    dev: false
+    resolution:
+      integrity: sha512-tYFmgx1Ha5jCLTt/n2Bk/1j5hVZ9GxNRzWEAWxiC3BWDi9KRo2fEK6fgSl0u52ww5D9SM1FiI9natGW5WSf9nA==
   /recaptcha2/1.3.3:
     dependencies:
       request: 2.88.2
     dev: false
     resolution:
       integrity: sha512-HgpvAmukTQW1UyZxM7PT/yLFayAN6rjTvYH13z/Ci69KfcOtv3BskRGBu7in+npzUG9XSxYAfRDtn6+p6p7tAw==
+  /redis/0.7.3:
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha1-7le3pE0l7BWU5ENl2BZfp9HUgRo=
   /regexp-clone/1.0.0:
     dev: false
     resolution:
@@ -2403,6 +2499,40 @@ packages:
     dev: false
     resolution:
       integrity: sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
+  /socket.io-client/0.9.16:
+    dependencies:
+      active-x-obfuscator: 0.0.1
+      uglify-js: 1.2.5
+      ws: 0.4.32
+      xmlhttprequest: 1.4.2
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-TadRXF53MEHRtCOXBBW8xDDzX8Y=
+  /socket.io-client/0.9.17:
+    dependencies:
+      active-x-obfuscator: 0.0.1
+      uglify-js: 1.2.5
+      ws: 0.4.32
+      xmlhttprequest: 1.4.2
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    resolution:
+      integrity: sha1-MdEsRLc/u6NJY57M+DPj+a4T/m8=
+  /socket.io/0.9.19:
+    dependencies:
+      base64id: 0.1.0
+      policyfile: 0.0.4
+      socket.io-client: 0.9.16
+    dev: false
+    engines:
+      node: '>= 0.4.0'
+    optionalDependencies:
+      redis: 0.7.3
+    resolution:
+      integrity: sha1-SQu1/Q3FTPAC7gTmf638Q7hIo48=
   /source-map/0.6.1:
     dev: false
     engines:
@@ -2562,6 +2692,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-wK0Ri4fOGjv/XPy8SBHZChl8CM7uMc5VML7SqiQ0zG7+J5Vr+RMQDoHa2CNT6KHUnTGIXH34UDMkPzAUyapBZg==
+  /tinycolor/0.0.1:
+    dev: false
+    engines:
+      node: '>=0.4.0'
+    resolution:
+      integrity: sha1-MgtaUtg6u1l42Bo+iH1K77FaYWQ=
   /to-fast-properties/2.0.0:
     dev: false
     engines:
@@ -2643,6 +2779,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
+  /uglify-js/1.2.5:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha1-tULCx29477NLIAsgF3Y0Mw/3ArY=
   /uid-safe/2.1.5:
     dependencies:
       random-bytes: 1.0.0
@@ -2661,6 +2802,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-nrXZwwXrD/T/JXeygJqdCO6NZZ1L66HrxM/Z7mIq2oPanoN0F1nLx3lwJMu6AwJY69hdixaFQOuoYsMjE5/C2A==
+  /underscore/1.12.0:
+    dev: false
+    resolution:
+      integrity: sha512-21rQzss/XPMjolTiIezSu3JAjgagXKROtNrYFEOWK109qY1Uv2tVjPTZ1ci2HgvQDA16gHYSthQIJfB+XId/rQ==
+  /underscore/1.4.4:
+    dev: false
+    resolution:
+      integrity: sha1-YaajIBBiKvoHljvzJSA88SI51gQ=
   /unique-string/2.0.0:
     dependencies:
       crypto-random-string: 2.0.0
@@ -2805,6 +2954,19 @@ packages:
     dev: true
     resolution:
       integrity: sha512-AvHcyZ5JnSfq3ioSyjrBkH9yW4m7Ayk8/9My/DD9onKeu/94fwrMocemO2QAJFAlnnDN+ZDS+ZjAR5ua1/PV/Q==
+  /ws/0.4.32:
+    dependencies:
+      commander: 2.1.0
+      nan: 1.0.0
+      options: 0.0.6
+      tinycolor: 0.0.1
+    dev: false
+    engines:
+      node: '>=0.4.0'
+    hasBin: true
+    requiresBuild: true
+    resolution:
+      integrity: sha1-eHphVEFPPJntg8V3IVOyD+sM7DI=
   /ws/7.4.3:
     dev: false
     engines:
@@ -2820,6 +2982,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==
+  /xmlhttprequest/1.4.2:
+    dev: false
+    engines:
+      node: '>=0.4.0'
+    resolution:
+      integrity: sha1-AUU6HZvtHo8XL2SVu/TIxCYyFQA=
   /y18n/4.0.1:
     dev: false
     resolution:
@@ -2851,6 +3019,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ZbotRWhF+lkjijC/VhmOT9wSgyBQ7+zr13+YLkhfsSiTriYsMzkTUFP18pFhWwBeMa5gUc1MzbhrO6/VB7c9Xg==
+  /zeparser/0.0.5:
+    dev: false
+    resolution:
+      integrity: sha1-A3JlYbwmjy5URPVMZlt/1KjAKeI=
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
@@ -2868,12 +3040,14 @@ specifiers:
   klasa: ^0.5.0
   module-alias: ^2.2.2
   mongoose: ^5.9.10
+  monitor: ^0.6.10
   node-fetch: ^2.6.0
   node-pre-gyp: ^0.14.0
   nodemon: 2.0.4
   passport: ^0.4.1
   passport-discord: ^0.1.4
   pug: ^3.0.0
+  reasonable-website: ^0.0.2
   recaptcha2: ^1.3.3
   sanitize-html: ^1.27.4
   showdown: ^1.9.1

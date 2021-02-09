@@ -71,12 +71,12 @@ module.exports = class extends Command {
 		const commands = await this._fetchCommands(message);
 		const { prefix } = message.guildSettings;
 		const display = new RichDisplay();
-		const color = message.member.displayColor;
 		for (const [category, list] of commands) {
 			display.addPage(new MessageEmbed()
 				.setTitle(`${category} Commands`)
-				.setColor(color)
+				.setColor(0xff9933)
 				.setDescription(list.map(this.formatCommand.bind(this, message, prefix, true)).join('\n'))
+        .setThumbnail('https://media.discordapp.net/attachments/804066817567883294/805732470691594250/PngItem_2986122.png?width=457&height=457')
 			);
 		}
 

@@ -27,7 +27,7 @@
         "prefix": "!"
     },
     "web": {
-        "domain_with_protocol": "https://rbots.glitch.me",
+        "domain_with_protocol": "https://www.networkbotlist.tk",
         "port": 3000,
         "ratelimit": 30,
         "recaptcha_v2": {

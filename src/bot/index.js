@@ -18,7 +18,7 @@ const client = new Client({
 
 //Bot Status
 client.once('ready', () => {
-    client.user.setActivity('Bots', { type: "WATCHING" });
+    client.user.setActivity('Network Bot List', { type: "WATCHING" });
 });
 
 module.exports.init = async (token) => {

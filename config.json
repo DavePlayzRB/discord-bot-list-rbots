@@ -10,10 +10,11 @@
             "bot": "803026845825761327", 
             "unverified": "803026845825761323",
             "verified": "803835437595492372",
-
+            "certified_bot": "803026845825761328",
+  
             "bot_developer": "803026845837688832",
             "bot_verifier":  "803026845837688836",
-            "certified_dev": ""
+            "certified_dev": "803026845837688833"
         }
     },
     "bot_options": {

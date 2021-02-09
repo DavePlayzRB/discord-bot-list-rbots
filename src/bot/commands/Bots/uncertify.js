@@ -9,7 +9,7 @@ var modLog;
 module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
-            permissionLevel: 9,
+            permissionLevel: 10,
             usage: '[User:user]'
         });
     }
@@ -20,32 +20,31 @@ module.exports = class extends Command {
 
         const botUser = await this.client.users.fetch(user.id);
         if (bot.logo !== botUser.displayAvatarURL({format: "png", size: 256}))
-            await Bots.updateOne({ botid: user.id }, {$set: {certification: "certified", logo: botUser.displayAvatarURL({format: "png", size: 256})}});
+            await Bots.updateOne({ botid: user.id }, {$set: {certification: "undercertified", logo: botUser.displayAvatarURL({format: "png", size: 256})}});
         else 
-            await Bots.updateOne({ botid: user.id }, {$set: { certification: "certified" } })
+            await Bots.updateOne({ botid: user.id }, {$set: { certification: "undercertified" } })
         
         let owners = [bot.owners.primary].concat(bot.owners.additional)
         let e = new MessageEmbed()
-            .setTitle('Bot Certified')
+            .setTitle('Bot Removed From Certification Program')
             .addField(`Bot`, `<@${bot.botid}>`, true)
             .addField(`Owner(s)`, owners.map(x => x ? `<@${x}>` : ""), true)
             .addField("Mod", message.author, true)
             .setThumbnail(botUser.displayAvatarURL({format: "png", size: 256}))
-            .setThumbnail('https://media.discordapp.net/attachments/804066817567883294/805732470691594250/PngItem_2986122.png?width=457&height=457')
             .setTimestamp()
-            .setColor(0xff9933)
+            .setColor(0x26ff00)
         modLog.send(e);
         modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
 
         owners = await message.guild.members.fetch({user:owners})
         owners.forEach(o => {
-            o.roles.add(message.guild.roles.cache.get(role_ids.certified_dev));
-            o.send(`Your bot \`${bot.username}\` has been Certified.`)
+            o.roles.add(message.guild.roles.cache.get(role_ids.bot_developer));
+            o.send(`Your bot \`${bot.username}\` has been Removed from networdbotlist certification program.`)
         })
         message.guild.members.fetch(message.client.users.cache.find(u => u.id === bot.botid)).then(bot => {
-            bot.roles.set([role_ids.bot, role_ids.verified, role_ids.certified_bot]);
+            bot.roles.set([role_ids.bot, role_ids.verified]);
         })
-        message.channel.send(`Certified \`${bot.username}\``);
+        message.channel.send(`Removed \`${bot.username}\` from certification program`);
     }
 
     async init() {

@@ -31,8 +31,8 @@
         "port": 3000,
         "ratelimit": 30,
         "recaptcha_v2": {
-            "site_key": "6LfeejsaAAAAAAgJeJwoGsySamisbZiDqy0X5hI4",
-            "secret_key": "6LfeejsaAAAAAINujsIfJK9p1voewJSjk4CRa9Au"
+            "site_key": "6LeGXlAaAAAAAJ4oC072uFyIGM04FFIa9eieiyAS",
+            "secret_key": "6LeGXlAaAAAAADptiO9aX8izvrdS1DTEV3Vs0fVQ"
         }
     }
 }

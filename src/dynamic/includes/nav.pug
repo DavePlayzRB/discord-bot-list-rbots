@@ -21,7 +21,7 @@
             |  Search
     span.dropdown
         if (req.user)
-            a#login.navtag.keep(href='/login') #{req.user.username}##{req.user.discriminator} 
+            a#login.navtag.keep(href='/login') #{req.user.username}  
             span.dd-content
                 a(href='/join' target='_blank') Join Server 
                  i.fab.fa-discord

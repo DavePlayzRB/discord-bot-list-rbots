@@ -77,6 +77,7 @@ module.exports = class extends Command {
 				.setColor(0xff9933)
 				.setDescription(list.map(this.formatCommand.bind(this, message, prefix, true)).join('\n'))
         .setThumbnail('https://media.discordapp.net/attachments/804066817567883294/805732470691594250/PngItem_2986122.png?width=457&height=457')
+        .setImage('https://media.discordapp.net/attachments/758082963928907881/809000320603652146/standard.gif')             
 			);
 		}
 

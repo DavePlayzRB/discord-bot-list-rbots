@@ -2,6 +2,7 @@
     "mongo_url": "mongodb+srv://6526931122Xr:Dave6526931122@cluster0.vfw6j.mongodb.net/test",
     "server": {
         "id": "803026845825761320",
+        "update_log_id": "803026846273765433",
         "invite": "https://discord.gg/QPHaKMJrMQ",
         "mod_log_id": "803026846273765434",
         "like_log": "803026846273765435",

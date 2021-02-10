@@ -19,7 +19,7 @@ route.patch("/:id", auth, async (req, res) => {
   let channel = await req.app.get('client').channels.cache.get(server.like_log);
   let webhook = (await channel.fetchWebhooks()).first();
   if (!webhook) 
-    webhook = await channel.createWebhook('Network Bot List')
+    webhook = await channel.createWebhook('Network Bot List Like ')
   await webhook.send(`<@${req.user.id}> (${userProfile.tag}) liked <@${req.params.id}>`);
   return res.json({ success: true })
 });

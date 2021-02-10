@@ -20,7 +20,7 @@ module.exports = class extends Command {
         if (bots.length === 0) cont = " No Bots Here!";
 
         let embed = new MessageEmbed()
-            .setTitle('<:DisCloud_online:803579685166120991> Queue')
+            .setTitle('Queue')
             .setColor(0xff8c00)
             .setDescription(cont)
         message.channel.send(embed)

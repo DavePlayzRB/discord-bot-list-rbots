@@ -31,6 +31,8 @@ body
             .buttons-case
                 a.bot-btns.button(target='_blank' href=bot.invite ? bot.invite : `https://discord.com/oauth2/authorize?client_id=${bot.botid}&scope=bot&permissions=0`)
                     | Invite
+                a.bot-btns.button(target='_blank' href=bot.invite ? bot.invite : ``)#
+                    | Report
                 a.bot-btns.button(target='_blank' href=`/api/embed/${bot.botid}`) Embed
             .bot-buttons
                 if (bot.support)

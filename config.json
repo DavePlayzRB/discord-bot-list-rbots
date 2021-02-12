@@ -1,0 +1,42 @@
+{
+    "mongo_url": "mongodb+srv://6526931122Xr:Dave6526931122@cluster0.vfw6j.mongodb.net/test",
+    "server": {
+        "id": "803026845825761320",
+        "update_log_id": "803026846273765433",
+        "DOWNTIME_CHANNEL_ID": "809630600281194546",
+        "invite": "https://discord.gg/QPHaKMJrMQ",
+        "mod_log_id": "803026846273765434",
+        "like_log": "803026846273765435",
+        "admin_user_ids": ["792919303862747146", "656643800235507712", "804933432517197864", "788863905689763841", "", ""],        
+      "role_ids": {
+            "bot": "803026845825761327", 
+            "unverified": "803026845825761323",
+            "verified": "803835437595492372",
+            "certified_bot": "803026845825761328",
+  
+            "bot_developer": "803026845837688832",
+            "bot_verifier":  "803026845837688836",
+            "certified_dev": "803026845837688833"
+        }
+    },
+    "bot_options": {
+        "bot_tags": ["Music", "Moderation", "Fun", "Economy", "Anime", "Game", "Meme", "Music", "Social", "Leveling", "Roleplay", "Role Management", "Logging", "Web Dashboard", "Stream", "Crypto", "Media", "Turkish", "Soundboard", "Utility", "Customizable Behavior", "PUBG", "Rocket League", "Fortnite", "Overwatch", "CSGO", "OSU!", "Minecraft", "League of Legends", "Warframe", "Diablo III", "Rust", "DOTA 2", "Starcraft 2", "Factorio", "Runescape", "Apex Legends", "Looking For Game", "Sneaker", "Pokemon", "Reddit", "Twitch", "Animal Crossing", "Valorant", "Modlxv1", "MEE6", "Dyno"],
+        "max_bot_tags": 20,
+        "max_owners_count": 90
+    },
+    "discord_client": {
+        "id": "795516179296682016",
+        "secret": "AW1IJYj3Dn5hc4p32wXfRNTtvp_5XRsI",
+        "token": "Nzk1NTE2MTc5Mjk2NjgyMDE2.X_KgLQ.W0l36vf34uLkOU2RprR59rOY-Mo",
+        "prefix": "!"
+    },
+    "web": {
+        "domain_with_protocol": "https://www.networkbotlist.tk",
+        "port": 3000,
+        "ratelimit": 30,
+        "recaptcha_v2": {
+            "site_key": "6LeGXlAaAAAAAJ4oC072uFyIGM04FFIa9eieiyAS",
+            "secret_key": "6LeGXlAaAAAAADptiO9aX8izvrdS1DTEV3Vs0fVQ"
+        }
+    }
+}

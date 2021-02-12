@@ -22,7 +22,7 @@ route.post("/:id", auth, async function (req, res) {
     let modLog = await req.app.get('client').channels.cache.get(mod_log_id);
     modLog.send(
         new MessageEmbed()
-            .setTitle('<:check_mark:805431321630605352> Bot Approved')
+            .setTitle('<:checkmark:806251154400346172> Bot Approved')
             .addField(`Bot`, `<@${bot.botid}>`, true)
             .addField(`Owner(s)`, owners.map(x => x ? `<@${x}>` : ""), true)
             .addField("Mod", req.user.username, true)

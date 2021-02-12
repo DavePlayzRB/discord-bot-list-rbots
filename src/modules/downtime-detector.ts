@@ -2,6 +2,8 @@ import { MessageEmbed, TextChannel } from 'discord.js';
 import { bot } from '../bot';
 import { SavedBot } from '../data/models/bot';
 
+const { server: {DOWNTIME_CHANNEL_ID, DOWNTIME_CHANNEL_ID} } = require("@root/config.json");
+
 export class DowntimeDetector {
   log = new Map<string, BotDowntime>();
   

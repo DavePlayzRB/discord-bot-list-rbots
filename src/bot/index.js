@@ -4,6 +4,9 @@ const {server: {role_ids: {bot_verifier}}, discord_client: {prefix}} = require("
 Client.defaultPermissionLevels
     .add(8, ({ guild, member }) => member.roles.cache.has(bot_verifier));
 
+const constant = require('discord.js/src/util/Constants.js')
+constant.DefaultOptions.ws.properties.$browser = `Discord iOS`
+
 const client = new Client({
     commandEditing: true,
     prefix: prefix,

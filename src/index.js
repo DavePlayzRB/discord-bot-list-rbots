@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const bot = require('@bot/index');
 const App = require('@structures/app.js');
 const { web: {port}, discord_client: {token}, mongo_url } = require("@root/config.json");
+const express = require('express');
+const app = express();
 
 
 (async () => {
@@ -21,21 +23,19 @@ const { web: {port}, discord_client: {token}, mongo_url } = require("@root/confi
 })()
 
 
-var express = require('express')
-var app = express()
 
-function checkHttps(req, res, next){
-  // protocol check, if http, redirect to https
-  
-  if(req.get('X-Forwarded-Proto').indexOf("https")!=-1){
-    console.log("https, yo")
-    return next()
-  } else {
-    console.log("just http")
-    res.redirect('https://' + req.hostname + req.url);
-  }
-}
+app.set('trust proxy', true); // <- required
+app.use((req, res, next) => {
+  if(!req.secure) return res.redirect('https://' + req.get('host') + req.url);
+  next();
+});
 
-app.all('*', checkHttps)
-app.use(express.static('public'))
-app.listen(8000)
+// rest of this is just a demo
+app.use((req, res, next) => {
+  res.send(`HTTPS: ${req.secure}`); 
+  next();
+});
+
+var listener = app.listen(process.env.PORT, function () {
+  console.log('Demo app listening on ' + listener.address().port);
+});

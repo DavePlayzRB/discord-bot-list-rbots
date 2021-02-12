@@ -1,0 +1,68 @@
+#navbar{
+    flex-direction: column;
+}
+.services{
+    justify-content: center;
+}
+#home p{
+    font-size: 13px;
+}
+#h1-primary{
+    font-size: 2px;
+    color: blue;
+}
+#home{
+    padding: 3px 68px;
+    height: 300px;
+}
+#navbar ul li a{
+    font-size: 8.3px;
+    padding: 0px 7px;
+    padding-bottom: 8px;
+}
+.btn{
+    font-size: 13px;
+    padding: 4px 8px;
+}
+
+#navbar ul li a:hover{
+    color: rgb(248, 248, 252);
+    text-decoration: underline;
+    background-color: black;
+    border-radius: 20px;
+}
+@keyframes nav-bar{
+    from{
+        padding-left: 0px;
+        opacity: 0;
+    }
+    to{
+        padding-left: 7px;
+        opacity: 1;
+    }
+}
+.stats ul{
+    display: initial;
+    margin: 0px 0px;
+}
+.cmd-section ul{
+    padding: 32px 30px;
+}
+.policy ul li{
+    padding: 4px 2px;
+    word-spacing: 2px;
+    margin: 0px 18px;
+}
+.syntax ul{
+    padding: 32px 2px;
+}
+.syntax ul li{
+    padding: 4px 2px;
+    word-spacing: 2px;
+    margin: 0px 18px;
+}
+.fonttxt{
+    overflow: hidden;
+    height: 90%;
+    width: 90%;
+}

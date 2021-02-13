@@ -14,8 +14,7 @@ body
                     code.prefix #{bot.prefix}
         .right
             h2(style='display: inline;')
-                | #{bot.username} 
-                i.fas.fa-robot
+                | #{bot.username}
                 if (discord_verified)
                     i.fas.fa-medal.verified
                         span.verified_tooltip Verified Bot
@@ -31,9 +30,8 @@ body
             .buttons-case
                 a.bot-btns.button(target='_blank' href=bot.invite ? bot.invite : `https://discord.com/oauth2/authorize?client_id=${bot.botid}&scope=bot&permissions=0`)
                     | Invite
-                a.bot-btns.button(target='_blank' href=bot.invite ? bot.invite : `#`)
-                    | Report
                 a.bot-btns.button(target='_blank' href=`/api/embed/${bot.botid}`) Embed
+                a.bot-btns.button(target='_blank' href=`#`) Report
             .bot-buttons
                 if (bot.support)
                     a.small-link(target='_blank' href=`${bot.support}`) Support Server
@@ -56,6 +54,5 @@ body
         #owners
             each person in owners
                 a.owner(href=`/user/${person.id}`)
-                    img(height='30px' src=person.tag !== 'Unknown User'  ? person.displayAvatarURL({format: "png", size: 256}) : '/assets/default-avatar.png')  
-                    span.tag #{req.user.username}  
-                    
+                    img(height='30px' src=person.tag !== 'Unknown User'  ? person.displayAvatarURL({format: "png", size: 256}) : '/assets/default-avatar.png')
+                    span.tag #{person.tag}

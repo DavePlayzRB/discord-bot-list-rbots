@@ -23,9 +23,6 @@ body
                     | #{bot.likes || 0}
             if (servers)
                 .servers #{`${servers} servers`}
-            .sts(class=botUser.presence.status)
-                i.fas.fa-circle
-                span #{botUser.presence.status}
             .summary #{bot.description}
             .buttons-case
                 a.bot-btns.button(target='_blank' href=bot.invite ? bot.invite : `https://discord.com/oauth2/authorize?client_id=${bot.botid}&scope=bot&permissions=0`)

@@ -1,6 +1,5 @@
 doctype html
 include includes/head.pug
-script(src='/assets/js/form.js')
 script(src="https://www.google.com/recaptcha/api.js" async defer)
 
 body
@@ -17,21 +16,13 @@ body
             br
             .input-holder
                 input#description.input(maxlength=max_summary_length type='text' placeholder=' ')
-                .placeholder Report
-            br
-            .input-holder
-                textarea#longdesc.input(rows='7')
-                .textarea-placeholder Description
-            br
-            .input-holder
-                input#note.input(maxlength=max_summary_length type='text' placeholder=' ')
-                .placeholder Note to admin
+                .placeholder Reason
             br
             .input-holder
                 input#ownerids.input.xinput(type='text' placeholder=' ')
                 .placeholder Additional Owner IDs
             br
             .center-inline.g-recaptcha(data-callback='update_token' data-sitekey=site_key data-theme=req.cookies["theme"] || "light")
-            a.button(onclick='submit()') Submit
+            a.button(onclick='submit()') Report!
             br
         br

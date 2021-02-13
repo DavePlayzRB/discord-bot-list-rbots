@@ -4,7 +4,15 @@ body(onload="load()")
     include includes/nav.pug
     #content
         span.header
-            h1 404 Not found
-            span#loading Loading...
-a.button(href='https://www.networkbotlist.tk') Normal Bot List
-
+           h1 404 Not Found
+           h2  Other Bots
+        #searchMore
+            | Would you like to 
+            a(href='/bots/search/') search all bots
+        #cards
+           
+           #bots
+           br  
+           a.button(href='javascript:history.back()') Back
+             
+            

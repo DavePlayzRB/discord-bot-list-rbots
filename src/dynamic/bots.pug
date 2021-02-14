@@ -18,16 +18,14 @@ body
                 if (discord_verified)
                     i.fas.fa-medal.verified
                         span.verified_tooltip Verified Bot
-                a.likes(href=`/bots/like/${bot.botid}`)
-                    i.far.fa-heart
-                    | #{bot.likes || 0}
+               
             if (servers)
                 .servers #{`${servers} servers`}
             .summary #{bot.description}
             .buttons-case
                 a.bot-btns.button(target='_blank' href=bot.invite ? bot.invite : `https://discord.com/oauth2/authorize?client_id=${bot.botid}&scope=bot&permissions=0`)
                     | Invite
-                a.bot-btns.button(target='_blank' href=`/api/embed/${bot.botid}`) Embed
+                a.bot-btns.button(target='_blank' href=`/bots/like/${bot.botid}`) Like
                 a.bot-btns.button(target='_blank' href=`https://www.networkbotlist.tk/report`) Report
             .bot-buttons
                 if (bot.support)

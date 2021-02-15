@@ -196,7 +196,7 @@ h2 {
 
 .card {
   padding: 4px;
-  height: 399px; 
+  height: 354px; 
   box-shadow: 0 0 4px 0.5px var(--box-shadow);
   margin: 10px;
   display: inline-block;
@@ -220,10 +220,10 @@ h2 {
 .likes {
   font-size: 0.7em;
   color: var(--color);
-  background: var(--background-2);
-  padding: px 8px 0 2px;
-  margin: 0 10px;
-  border-radius: 5px;
+  background: var(--bakground-2);
+  padding: px 5px 0 2px;
+  margin: 0 1px;
+  border-radius: 1px;
   bottom: 0 !important;
 }
 

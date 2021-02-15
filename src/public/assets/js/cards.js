@@ -35,13 +35,12 @@ function loadMore(res) {
             <img src="${bot.logo}" class="icon">
             <h2 class="title">
                 ${bot.username}
+                <a class="likes" href="/bots/like/${bot.botid}">
+                    <i class="fasfa-chevron-up"></i>${bot.likes || 0}
+                </a>
             </h2>
             <p class="desc">${bot.description}</p>
-            <a href="/bots/${bot.botid}" class="vb">View</a>
-	    <a href="" class="vb">invite</a>
-	  
-	
-	  
+            <a href="/bots/${bot.botid}" class="button small">View bot info</a>
         </div>`
 
         document.getElementById('cards').insertAdjacentHTML("beforeend", html)

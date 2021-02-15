@@ -14,29 +14,6 @@ const botsSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
-  botTags:{
-    type: Array,
-    required: false
-  },
-  botLibrary: {
-    type: String,
-    required: false 
-  },
-  certified:{
-    type: String,
-    required: false,
-    default: "unverified"
-  },
-  votes: {
-    type: Number,
-    required: false,
-    default: 0
-  },
-  usersVoted: {
-    type: Array,
-    required: false,
-    default: []
-  },
   logo: {
     type: String,
     required: true
@@ -61,56 +38,62 @@ const botsSchema = new mongoose.Schema({
     required: true,
     default: "unverified"
   },
-  website: {
-    type: String,
-    required: false
+  support: {
+    type: String
   },
-   support: {
-    type: String,
-    required: true
+  website: {
+    type: String
+  },
+  github: {
+    type: String
+  },
+  tags: {
+    type: Array,
+    required: false,
+    default: []
   },
   owners: {
-      type: Array,
-      required: true
+      primary: {
+        type: String,
+        required: true
+      },
+      additional: {
+        type: Array,
+        default: []
+      }
   },
   auth: {
     type: String
   },
-  servers: {
-    type: Number,
-    default: 0
-  },
-  views: {
-    type: Number,
-    default: 0
-  },
+  servers: [
+    {
+      time: {
+        type: Date,
+        default: () => Date.now()
+      },
+      count: {
+        type: Number,
+        required: true
+      }
+    }
+  ],
   nsfw: {
     type: Boolean,
     default: false
   },
-  bannerURL: {
+  likes: {
+    type: Number,
+    default: 0
+  },
+  ratelimit: {
+    time: {
+      type: Date,
+      default: () => Date.now()
+    }
+  },
+  note: {
     type: String,
-    default: "https://cdn.discordapp.com/attachments/735022938419363891/754635158958768138/wp4462550.png"
-  },
-  webhook: {
-    type: String, 
-    default: "none" 
-  },
-  inRecomendationQueue:{
-    type: Boolean,
-    default: false
-  },
-  badges: {
-    type: Array
-  },
-  walletAddress: {
-    type: String
-  },
-  themeColor: {
-    type: String
-  },
-  backgroundColor: {
-    type: String
+    required: false
   }
 });
 

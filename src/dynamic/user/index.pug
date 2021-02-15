@@ -9,12 +9,8 @@ body
         .badge-holder
             if (admin)
                 span.badge
-                    img(src='https://media.discordapp.net/attachments/764398216942714890/805915332153442344/unknown.png?width=457&height=457' title='Admin')
-                    |  Admin 
-                    
-                span.badge
-                    img(src='https://upload.wikimedia.org/wikipedia/commons/9/92/4228_discord_bot_dev.png' title='Bot Supporter Dev')
-                    | Supporter Dev
+                    img(src='/assets/img/admin.png' title='Admin')
+                    |  Admin
     #cards
         each val, i in cards
             div.card

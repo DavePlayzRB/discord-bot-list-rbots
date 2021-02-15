@@ -36,7 +36,7 @@ function loadMore(res) {
             <h2 class="title">
                 ${bot.username}
                 <a class="likes" href="/bots/like/${bot.botid}">
-                    <i class="fasfa-chevron-up"></i>${bot.likes || 0}
+                    <i class="fas fa-chevron-up"></i> 
                 </a>
             </h2>
             <p class="desc">${bot.description}</p>

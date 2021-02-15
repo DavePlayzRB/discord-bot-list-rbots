@@ -196,12 +196,12 @@ h2 {
 
 .card {
   padding: 4px;
-  height: 455px; 
+  height: 399px; 
   box-shadow: 0 0 4px 0.5px var(--box-shadow);
   margin: 10px;
   display: inline-block;
   width: calc(80vw / 4);
-  border-radius: 20px;
+  border-radius: 10px;
   transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
 }
 .card:hover {
@@ -221,7 +221,7 @@ h2 {
   font-size: 0.7em;
   color: var(--color);
   background: var(--background-2);
-  padding: 3px 8px 0 2px;
+  padding: px 8px 0 2px;
   margin: 0 10px;
   border-radius: 5px;
   bottom: 0 !important;

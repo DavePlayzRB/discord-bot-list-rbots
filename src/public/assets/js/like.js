@@ -1,91 +1,42 @@
-Array.prototype.shuffle = function () {
-    let a = this;
-    for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-}
-
-async function load() {
-    var n = 0;
-    let BotList = await fetch(`/api/bots/list`);
-    BotList = await BotList.json()
-    BotList = BotList.sort((a, b) => b.likes - a.likes);;
-    
-    $('#loading').css("display","none");
-
-    let selection = BotList.slice(n, n + 10);
-    loadMore(selection);
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() + $(window).height() > $(document).height() - 200) {
-            n += 10;
-            loadMore(BotList.slice(n, n + 10));
-        }
-    });
-};
-
-function loadMore(res) {
-    res.forEach(function (bot) {
-        if (bot.state == "unverified") return;
-
-        let html = `
-        <div class="card">
-            <img src="${bot.logo}" class="icon">
-            <h2 class="title">
-                ${bot.username}
-                <a class="likes" href="/bots/like/${bot.botid}">            
-                </a>
-            </h2>
-            <p class="desc">${bot.description}</p>
-            <a href="/bots/${bot.botid}" class="button small">View</a>
-             <a href="https://discord.com/oauth2/authorize?client_id=${bot.botid}&scope=bot&permissions=0" class="button small">invite</a>
-        </div>`
-
-        document.getElementById('cards').insertAdjacentHTML("beforeend", html)
+$(document).ready(async function () {
+  $('#like').click(async () => {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: true
     })
-}
-
-function search() {
-    if (document.getElementById('search').contentEditable === "false") return;
-    let s = String(document.getElementById('search').innerHTML.toLowerCase()).replaceAll('<br>', "");
-    let cards = document.getElementById('cards');
-    cards.style.display = "none";
-    if (document.getElementById('loading')) document.getElementById('loading').display = "block";
-    if (cards) {
-        let totalCards = 0;
-        let cardsVisible = 0;
-
-        let list = cards.children;
-        for (var i = 1; i < list.length; i++) {
-            totalCards++
-            let card = list[i];
-            let title = card.children[1].innerHTML.toLowerCase();
-            let desc = card.children[2].innerHTML.toLowerCase();
-            if (!title.includes(s) && !desc.includes(s)) card.style.display = "none";
-            else {
-                card.style.display = "inline-block";
-                cardsVisible++;
-            }
-        }
-
-        if (cardsVisible === 0) {
-            document.getElementById('searchMore').innerHTML = `No bots found. Would you like to <a href="/bots/search/?q=${s}">search all bots</a>?`;
-            document.getElementById('searchMore').style.display = "block";
-        } else {
-            document.getElementById('searchMore').innerHTML = `Would you like to <a href="/bots/search/?q=${s}">search all bots</a>`
-            document.getElementById('searchMore').style.display = "block";
-        }
-
-        if (document.getElementById('search').innerHTML === "") {
-            document.getElementById('searchMore').style.display = "none";
-            for (var i = 1; i < list.length; i++) {
-                let card = list[i];
-                card.style.display = "inline-block";
-            }
-        }
+    let { isConfirmed } = await swalWithBootstrapButtons.fire({
+      title: 'Are you sure you want to like this bot ?',
+      text: "You won't be able to like for the next 12 hours.",
+      icon: 'info',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, Like'
+    })
+    if (!isConfirmed) return;
+    let botid = location.href.split(location.host)[1].replace('/bots/like/', '').replace('/', '');
+    let req = await fetch(`/api/like/${botid}`, {
+      method: "PATCH",
+      headers: { 'Content-Type': 'application/json' }
+    })
+    req = await req.json()
+    if (req.success) {
+      await swalWithBootstrapButtons.fire({
+        title: 'Success',
+        text: 'You have successfully liked !',
+        icon: 'success'
+      })
+      location.href = `/bots/${botid}`
+    } else {
+      let hours = 11 - Math.floor(req.time / 3600000);
+      let minutes = 60 - Math.ceil((req.time  / 60000) % 60);
+      await swalWithBootstrapButtons.fire({
+        title: 'Error',
+        text: `You can like again after ${hours} hours and ${minutes} minutes`,
+        icon: 'error'
+      })
+      location.href = `/bots/${botid}`
     }
-    if (document.getElementById('loading')) document.getElementById('loading').display = "none";
-    cards.style.display = "block";
-}
+  })
+})
